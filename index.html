@@ -40,8 +40,12 @@
 	</section>
 	<section id="guitarras" class="guitarras contenedor"> <!-- guitarras -->
 		<h2>Nuestras guitarras</h2>
+		<div class="video-responsive-contenedor">
+			<iframe class="video-responsive-src" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<video src="video/320x240.ogg"></video>
 		<article class="guitarra">
-			<img class="right" src="Media\invie-acustica.png" alt="Guitarra Invie Acustica" width="350"/>
+			<img class="right" data-src="Media\invie-acustica.png" alt="Guitarra Invie Acustica" width="350"/>
 			<div class="contenedor-guitarra-a">
 				<h3 class="title-b">Invie Acustica</h3>
 				<ol>
@@ -52,7 +56,7 @@
 			</div>
 		</article>
 		<article class="guitarra b">
-			<img class="left" src="Media\invie-classic.png" alt="Guitarra Invie Classic" width="350"/>
+			<img class="left" data-src="Media\invie-classic.png" alt="Guitarra Invie Classic" width="350"/>
 			<div class="contenedor-guitarra-b">
 				<h3 class="title-b">Invie Classic</h3>
 				<ol>
@@ -66,7 +70,7 @@
 	<footer class="footer">
     <div class="contenedor">
       <div class="contacto">
-				<img src="Media\invie-white.png" alt="Logotipo en blanco"/>
+				<img data-src="Media\invie-white.png" alt="Logotipo en blanco"/>
 				<a href="tel:+523024235678"><strong>Telefono</strong><span>3024235678</span></a>
         <a href="mailto:contacto@inivie.com"><strong>E-mail</strong><span>contacto@inivie.com</span></a>
 			</div>
@@ -107,7 +111,7 @@
       </form>
     </div>
 	</footer>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
 	<script>
 
 		var condicion = window.matchMedia('(max-width: 500px)');
@@ -136,6 +140,12 @@
 			$menu.classList.toggle("active");
 			$burguerButton.classList.toggle = "icon-close";
 		}
+
+		//lazy loading
+		//Importante poner atributo 'alt' en las imagenes
+		var bLazy = new Blazy({
+    		selector: 'img'
+		});
 	
 	</script>
 
