@@ -5,6 +5,7 @@
 	<title>Invie - tus mejores guitarras!!</title>
 	<link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="css\style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<!-- <link rel="stylesheet" media="(max-width: 800px)" href="css\media-querie.css"> -->
 	
 </head>
@@ -108,12 +109,33 @@
 	</footer>
 
 	<script>
+
+		var condicion = window.matchMedia('(max-width: 500px)');
 		var $burguerButton = document.getElementById("burguer-button");
 		var $menu = document.getElementById("menu");
-		$burguerButton.addEventListener("touchstart", function()
+		condicion.addListener(mediaQuery);
+		mediaQuery();
+		
+
+		function mediaQuery()
+		{
+			if (condicion.matches)
+			{
+				$burguerButton.addEventListener("touchstart", togleMenu);
+				$burguerButton.style.display = 'inline-block';
+			}
+			else
+			{
+				$burguerButton.removeEventListener("touchstart", togleMenu);
+				$burguerButton.style.display = 'none';
+			}
+		}
+
+		function togleMenu()
 		{
 			$menu.classList.toggle("active");
-		});
+			$burguerButton.classList.toggle = "icon-close";
+		}
 	
 	</script>
 

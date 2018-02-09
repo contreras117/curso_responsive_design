@@ -317,7 +317,6 @@ footer > .contenedor
   top: 20px;
   left: 20px;
   cursor: pointer;
-  display: none;
   z-index: 3;
 }
 
@@ -463,11 +462,11 @@ footer > .contenedor
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: 0.3s;
   }
 
   .menu.active{
     left: 0;
-    transition: 0.3s
   }
 
   .menu li{
@@ -485,9 +484,6 @@ footer > .contenedor
     display: none;
   }
 
-  .burguer-button{
-    display: inline-block;
-  }
   .titulo{
     font-size: 30px;
   }
