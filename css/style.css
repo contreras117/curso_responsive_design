@@ -264,7 +264,7 @@ video{
 
 }
 
-footer > .contenedor
+.footer > .contenedor
 {
   display: flex;
   justify-content: space-between;
@@ -275,7 +275,6 @@ footer > .contenedor
 {
   color: white;
   display: flex;
-  /* width: 400px; */
   width: auto;
 }
 
