@@ -113,8 +113,11 @@
     </div>
 	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 	<script>
 
+
+		//Uso de media quiery con java script
 		var condicion = window.matchMedia('(max-width: 500px)');
 		var $burguerButton = document.getElementById("burguer-button");
 		var $menu = document.getElementById("menu");
@@ -139,7 +142,17 @@
 		function togleMenu()
 		{
 			$menu.classList.toggle("active");
-			$burguerButton.classList.toggle = "icon-close";
+			$burguerButton.classList.toggle("icon-close");
+		}
+		function showMenu()
+		{
+			$menu.classList.add("active");
+			$burguerButton.classList.add("icon-close");
+		}
+		function hideMenu()
+		{
+			$menu.classList.remove("active");
+			$burguerButton.classList.remove("icon-close");
 		}
 
 		//lazy loading
@@ -147,6 +160,13 @@
 		var bLazy = new Blazy({
     		selector: 'img'
 		});
+
+
+		//Gestos touch con hammer.js
+		var $body = document.body;
+		var gestos = new Hammer($body);
+		gestos.on('swipeleft', hideMenu);
+		gestos.on('swiperight', showMenu);
 	
 	</script>
 
