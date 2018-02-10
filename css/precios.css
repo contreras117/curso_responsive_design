@@ -23,7 +23,7 @@ td
 
 table,td
 {
-  border: 2px solid #273b47;
+  border: 1px solid #273b47;
   border-collapse: collapse;
 }
 
@@ -31,4 +31,25 @@ table,td
 {
   padding: 50px 0;
   flex: 1;
+}
+
+@media screen and (max-width: 800px){
+
+  .tabla{
+    margin: 50px 20px;
+  }
+  .tabla .contenedor{
+    overflow: auto;
+    border: 1px solid #273b47;
+  }
+
+  .tabla .contenedor::-webkit-scrollbar{
+    height: 7px;
+  }
+
+  .tabla .contenedor::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: #273b47;
+  }
+
 }

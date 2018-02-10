@@ -162,6 +162,7 @@ video{
 
 .background
 {
+  background: #466173;
   background-image: url("../Media/background.png");
   background-size: cover;
 }
@@ -311,6 +312,7 @@ footer > .contenedor
 }
 
 .burguer-button{
+  color: white;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -463,6 +465,14 @@ footer > .contenedor
 
 @media screen and (max-width: 500px) {
   
+  .header{
+    position: static;
+  }
+
+  .header .contenedor{
+    position: static;
+  }
+
   .portada{
     text-align: center;
   }
@@ -519,4 +529,10 @@ footer > .contenedor
   .title-b{
     font-size: 30px;
   }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:2){
+ .background{
+    background-image: url("../Media/background2x.png");
+ }
 }

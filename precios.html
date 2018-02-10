@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="css\style.css">
 	<link rel="stylesheet" href="css\precios.css">
@@ -13,7 +14,8 @@
 			<figure class="logotipo"> <!-- logotipo -->
 				<img src="Media\invie2x.png" alt="Invie logotipo" width="186" height="60"/>
 			</figure>
-			<nav class="menu">
+			<span id="burguer-button" class="burguer-button icon-menu"></span>
+			<nav class="menu" id="menu">
 				<ul>
 					<li>
 						<a href="index.html">Home</a>
@@ -29,28 +31,40 @@
 		</div>
 		
 	</header>
-	<section class="tabla contenedor">
-		<table>
-			<thead>
-				<tr>
-					<th>Modelo</th>
-					<th>Precio</th>
-					<th>Descripción</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Invie classic</td>
-					<td>$10000</td>
-					<td>Una Guitarra muy pro</td>
-				</tr>
-				<tr>
-					<td>Invie acustica</td>
-					<td>$11000</td>
-					<td>Una guitarra mas pro</td>
-				</tr>
-			</tbody>
-		</table>
+	<section class="tabla">
+		<div class="contenedor">
+			<table>
+				<thead>
+					<tr>
+						<th>Modelo</th>
+						<th>Precio</th>
+						<th>Descripción</th>
+						<th>Modelo</th>
+						<th>Precio</th>
+						<th>Descripción</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Invie classic</td>
+						<td>$10000</td>
+						<td>Una Guitarra muy pro</td>
+						<td>Invie classic</td>
+						<td>$10000</td>
+						<td>Una Guitarra muy pro</td>
+					</tr>
+					<tr>
+						<td>Invie acustica</td>
+						<td>$11000</td>
+						<td>Una guitarra mas pro</td>
+						<td>Invie acustica</td>
+						<td>$11000</td>
+						<td>Una guitarra mas pro</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
 	</section>
   <footer class="footer">
     <div class="contenedor">
@@ -96,5 +110,42 @@
       </form>
     </div>
 	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+	<script>
+
+		var condicion = window.matchMedia('(max-width: 500px)');
+		var $burguerButton = document.getElementById("burguer-button");
+		var $menu = document.getElementById("menu");
+		condicion.addListener(mediaQuery);
+		mediaQuery();
+		
+
+		function mediaQuery()
+		{
+			if (condicion.matches)
+			{
+				$burguerButton.addEventListener("touchstart", togleMenu);
+				$burguerButton.style.display = 'inline-block';
+			}
+			else
+			{
+				$burguerButton.removeEventListener("touchstart", togleMenu);
+				$burguerButton.style.display = 'none';
+			}
+		}
+
+		function togleMenu()
+		{
+			$menu.classList.toggle("active");
+			$burguerButton.classList.toggle = "icon-close";
+		}
+
+		//lazy loading
+		//Importante poner atributo 'alt' en las imagenes
+		var bLazy = new Blazy({
+    		selector: 'img'
+		});
+	
+	</script>
 </body>
 </html>
