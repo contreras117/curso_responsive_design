@@ -1,3 +1,5 @@
+/* COdigo para los iconos de Icomoon*/
+
 @font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon.eot?vttqpe');
@@ -34,7 +36,7 @@
   content: "\ea0d";
 }
 
-
+/* COdigo para los iconos de Icomoon*/
 
 
 
@@ -55,6 +57,7 @@ body
 input, textarea
 {
   outline: none;
+  font: 400 13.3333px Arial;
 }
 
 input:focus
@@ -260,8 +263,6 @@ video{
   width: 300px;
   flex-wrap: wrap;
   align-items: center;
-
-
 }
 
 .footer > .contenedor
@@ -325,20 +326,6 @@ video{
   z-index: 3;
 }
 
-.footer textarea{
-  font-family: inherit;
-  font-size: 100%;
-  margin: 0;
-  line-height: 1.15;
-}
-
-input[type="text"], input[type="email"]{
-  font-family: inherit;
-  font-size: 100%;
-  margin: 0;
-  line-height: 1.15;
-}
-
 input[type="radio"]{
     margin: 3px 3px 0px 5px;
 }
@@ -348,14 +335,6 @@ input[type="checkbox"]{
 }
 
     
-
- input[type="submit"]{
-  font-family: inherit;
-  font-size: 100%;
-  margin: 0;
-  line-height: 1.15;
-}
-
 .video-responsive-contenedor{
   position: relative;
   padding-top: 56.25%; /* Altura porcentual para mantener la proporcion 16:9. Se calcula con regla de 3*/
