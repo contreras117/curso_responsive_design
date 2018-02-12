@@ -325,6 +325,36 @@ video{
   z-index: 3;
 }
 
+.footer textarea{
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  line-height: 1.15;
+}
+
+input[type="text"], input[type="email"]{
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  line-height: 1.15;
+}
+
+input[type="radio"]{
+    margin: 3px 3px 0px 5px;
+}
+
+input[type="checkbox"]{
+    margin: 3px 0.5ex;
+}
+
+    
+
+ input[type="submit"]{
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  line-height: 1.15;
+}
 
 .video-responsive-contenedor{
   position: relative;
@@ -446,12 +476,12 @@ video{
     margin: 0;
   }
 
-  input [type="text"], input [type="email"]{
+  input[type="text"], input[type="email"]{
     font-size: 16px;
     padding: 5px;
   }
 
-  input [type="radio"], input [type="checkbox"]{
+  input[type="radio"], input[type="checkbox"]{
     zoom: 1.5;
   }
 
