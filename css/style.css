@@ -453,6 +453,15 @@ input[type="checkbox"]{
 
   .contacto{
     margin: 0 auto;
+    display: block;
+  }
+
+  .contacto a{
+    display: block;
+  }
+
+  .sexo label{
+    display: block;
   }
 
   .formulario{
@@ -461,13 +470,20 @@ input[type="checkbox"]{
     width: 300px;
   }
 
+  .formulario label{
+    font-size: 20px;
+  }
+
   .intereses label{
     display: block;
-    font-size: 16px;
   }
 
   .footer_col1{
     margin: 0;
+  }
+
+  input[type="text"]{
+    margin-bottom: 20px;
   }
 
   input[type="text"], input[type="email"]{
