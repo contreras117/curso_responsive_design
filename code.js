@@ -51,3 +51,11 @@
   var gestos = new Hammer($body);
   gestos.on('swipeleft', hideMenu);
   gestos.on('swiperight', showMenu);
+
+
+  //Cargar las fuentes de google fonts de manera asincrona
+  WebFont.load({
+    google: {
+      families: ['Montserrat:400,700', 'Allerta']
+    }
+  });
