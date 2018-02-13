@@ -11,12 +11,12 @@
   {
     if (condicion.matches)
     {
-      $burguerButton.addEventListener("touchstart", togleMenu);
+      $burguerButton.addEventListener("touchstart", togleMenu, {passive: true});
       $burguerButton.style.display = 'inline-block';
     }
     else
     {
-      $burguerButton.removeEventListener("touchstart", togleMenu);
+      $burguerButton.removeEventListener("touchstart", togleMenu, {passive: true});
       $burguerButton.style.display = 'none';
     }
   }
