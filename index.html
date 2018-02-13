@@ -41,10 +41,14 @@
 	</section>
 	<section id="guitarras" class="guitarras contenedor"> <!-- guitarras -->
 		<h2>Nuestras guitarras</h2>
-		<div class="video-responsive-contenedor">
-			<iframe class="video-responsive-src" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		<div class="video-demo-contenedor">
+			<div class="video-demo">
+				<div class="video-responsive-contenedor">
+					<iframe class="video-responsive-src" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
 		</div>
-		<video src="video/320x240.ogg"></video>
+		<!-- <video src="video/320x240.ogg"></video> -->
 		<article class="guitarra">
 			<img class="right" data-src="Media\invie-acustica.png|Media\invie-acustica2x.png" alt="Guitarra Invie Acustica" width="350"/>
 			<div class="contenedor-guitarra-a">
@@ -114,61 +118,7 @@
 	</footer>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-	<script>
-
-
-		//Uso de media quiery con java script
-		var condicion = window.matchMedia('(max-width: 500px)');
-		var $burguerButton = document.getElementById("burguer-button");
-		var $menu = document.getElementById("menu");
-		condicion.addListener(mediaQuery);
-		mediaQuery();
-		
-
-		function mediaQuery()
-		{
-			if (condicion.matches)
-			{
-				$burguerButton.addEventListener("touchstart", togleMenu);
-				$burguerButton.style.display = 'inline-block';
-			}
-			else
-			{
-				$burguerButton.removeEventListener("touchstart", togleMenu);
-				$burguerButton.style.display = 'none';
-			}
-		}
-
-		function togleMenu()
-		{
-			$menu.classList.toggle("active");
-			$burguerButton.classList.toggle("icon-close");
-		}
-		function showMenu()
-		{
-			$menu.classList.add("active");
-			$burguerButton.classList.add("icon-close");
-		}
-		function hideMenu()
-		{
-			$menu.classList.remove("active");
-			$burguerButton.classList.remove("icon-close");
-		}
-
-		//lazy loading
-		//Importante poner atributo 'alt' en las imagenes
-		var bLazy = new Blazy({
-    		selector: 'img'
-		});
-
-
-		//Gestos touch con hammer.js
-		var $body = document.body;
-		var gestos = new Hammer($body);
-		gestos.on('swipeleft', hideMenu);
-		gestos.on('swiperight', showMenu);
-	
-	</script>
+	<script src="code.js"></script>
 
 </body>
 </html>
